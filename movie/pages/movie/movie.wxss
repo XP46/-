@@ -1,0 +1,75 @@
+/* pages/movie/movie.wxss */
+@import 'movie-item/movie-item.wxss';
+@import 'movie-grid/movie-grid-template.wxss';
+.movie-container{
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+}
+.movie-search{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search-pic{
+  vertical-align: middle;
+  padding: 30rpx 30rpx;
+}
+.search_canel{
+  float: right;
+}
+.xx-img{
+  width: 25rpx;
+  height: 25rpx;
+  vertical-align: middle;
+  margin-right: 12rpx;
+}
+.cannel{
+  font-size: 22rpx;
+  color: #666;
+  
+}
+.search-in{
+  width: 70%;
+  font-size: 28rpx;
+  color: #666;
+  padding-left: 40rpx;
+  letter-spacing: 2rpx;
+}
+.movie-hot{
+  background-color: #FFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  padding-left: 10rpx;
+  padding-right: 20rpx;
+  font-size: 28rpx;
+}
+.more{
+  color: rgb(74, 150, 236)
+}
+.movie-display{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.movie-item{
+  flex: 1;
+}
+.movie-pic{
+  width: 200rpx;
+  height: 250rpx;
+}
+.link{
+  height: 40rpx;
+  background-color: #f2f2f2;
+}
+.search-panel{
+  position: absolute;
+  top: 100rpx;
+}

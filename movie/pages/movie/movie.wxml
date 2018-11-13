@@ -1,0 +1,40 @@
+<import src='movie-item/movie-item.wxml' />
+<import src='movie-grid/movie-grid-template.wxml' />
+<!--pages/movie/movie.wxml-->
+<view class='movie-container'>
+  <view class='movie-search'>
+    <icon type='search' size='14' color="#405f80" class='search-pic'></icon>
+    <input type=' text' placeholder='搜索电影'  class='search-in' bindfocus='onBindFocus' bindblur='onBindBlur' value="{{search_key}}"></input>
+    <view wx:if="{{searchPanelShow}}" class='search_canel'>
+      <image src='/images/icon/xx.png' bindtap='searchDelete' class='xx-img' ></image>
+      <text bindtap='onCanelImgTap' class='cannel'>取消</text>
+    </view>
+  </view>
+
+  <view wx:if="{{containerShow}}">
+    <view class='movieItem'>
+      <template is="movieItem" data="{{...inTheaters}}"></template>
+    </view>
+
+    <!-- 分界线 -->
+    <view class='link'></view>
+    <!-- 分界线 -->
+
+    <view class='movieItem'>
+      <template is="movieItem" data="{{...comingSoon}}"></template>
+    </view>
+
+    <!-- 分界线 -->
+    <view class='link'></view>
+    <!-- 分界线 -->
+
+    <view class='movieItem'>
+      <template is="movieItem" data="{{...top250}}"></template>
+    </view>
+  </view>
+</view>
+
+
+<view class='search-panel'  wx:if="{{searchPanelShow}}">
+  <template is="movieGridTemplate" data="{{...searchResult}}"></template>
+</view>

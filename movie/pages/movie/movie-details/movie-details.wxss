@@ -1,0 +1,156 @@
+/* pages/movie/movie-details/movie-details.wxss */
+.detail-container{
+  display: flex;
+  flex-direction:column;
+}
+.detail-head{
+  width: 100%;
+  height: 300rpx;
+  filter: blur(3px);
+}
+.detail-head:after{
+    content: "";
+    height: 300rpx;
+  width: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background: inherit;
+    filter: blur(2px);
+    z-index: 2;
+}
+.movie-view-container{
+  position: absolute;
+  z-index: 3;
+}
+.movie-detail{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  
+}
+.movie-commend{
+  display: flex;
+  flex-direction: row;
+  font-size: 24rpx;
+  color: #333;
+}
+.movie-title{
+  color: #FFF;
+  font-weight: bold;
+  font-size: 35rpx;
+  margin-bottom: 50rpx;
+  letter-spacing: 5rpx;
+}
+.movie-country{
+  color: #FFF;
+  font-size: 28rpx;
+  margin-bottom: 75rpx;
+  letter-spacing: 3rpx;
+}
+.nums{
+  color: #f11749;
+  margin-right: 20rpx;
+}
+.txt{
+  margin-right: 40rpx;
+}
+.movie-pic{
+  width: 175rpx;
+  height: 250rpx;
+  position: absolute;
+  left: 550rpx;
+  top: 140rpx;
+}
+
+
+/* 电影信息 */
+.movie-info{
+  padding-left:30rpx; 
+  margin-top: 40rpx;
+}
+.Eng-title{
+  font-size: 23rpx;
+  font-weight: bold;
+  color: #666;
+  
+}
+.star-pic{
+  width: 25rpx;
+  height: 25rpx;
+  margin: auto 1rpx;
+}
+.score-star{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50rpx;
+}
+.score-star,.movie-director,.movie-actor,.movie-type{
+  margin-bottom: 25rpx;
+}
+.movie-score,.director,.actor,.type,.summary{
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 25rpx;
+  letter-spacing: 2rpx;
+}
+.score{
+  margin-left: 25rpx;
+}
+.score,.name{
+  font-size: 23rpx;
+  color: #666;
+  letter-spacing: 2rpx;
+}
+.link{
+  width: 100%;
+  height: 1rpx;
+  background-color: #d9d9d9;
+  margin: 60rpx 0 50rpx;
+}
+
+
+/* 剧情简介 */
+.movie-content{
+  padding-left: 35rpx;
+  padding-right: 50rpx;
+}
+.summary{
+  font-size: 26rpx;
+}
+.content{
+  margin-top: 35rpx;
+  font-size: 26rpx;
+  color: #666;
+  line-height: 50rpx;
+}
+
+/* 影人信息 */
+.actor-info{
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+  padding-top: 60rpx;
+  margin-top: 60rpx;
+  border-top:1rpx solid #d9d9d9; 
+}
+scroll-view{
+  width: 100%;
+  height: 280rpx;
+  margin-top: 40rpx;
+}
+.src_main{
+  display: flex;
+  flex-direction: row;
+}
+.people{
+  flex-direction: column;
+  align-items: center;
+  width: 180rpx;
+  margin-right: 20rpx;
+}
+.people-pic{
+  width: 180rpx;
+  height: 210rpx;
+}

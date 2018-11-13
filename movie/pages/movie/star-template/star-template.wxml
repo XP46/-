@@ -1,0 +1,16 @@
+<template name='star-template'>
+  <view class='movie-comment'>
+    <view class='star-view'>
+      <block wx:for="{{stars}}" wx:for-item="i" wx:key="">
+        <image wx:if="{{i}}" src='/images/icon/star.png' class='star-pic'></image>
+        <image wx:else src='/images/icon/none-star.png' class='star-pic'></image>
+      </block>
+      <!-- <image src='/images/icon/star.png' class='star-pic'></image>
+      <image src='/images/icon/star.png' class='star-pic'></image>
+      <image src='/images/icon/star.png' class='star-pic'></image>
+      <image src='/images/icon/star.png' class='star-pic'></image>
+      <image src='/images/icon/none-star.png' class='star-pic'></image> -->
+    </view>
+    <text class='movie-score'>{{score}}</text>
+  </view>
+</template>

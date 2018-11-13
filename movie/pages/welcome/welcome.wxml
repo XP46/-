@@ -1,0 +1,7 @@
+<view class='container'>
+  <image src='/images/avatar/1.png' class='avatar'></image>
+  <text class='motto'>{{hello}}</text>
+  <view class='jounery-container'>
+    <text class='jounery' bindtap='openNew'>{{tips}}</text>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+@import '../star-template/star-template.wxss';
+.movie-item{
+  flex: 1;
+  text-align: left;
+}
+.movie-pic{
+  width: 200rpx;
+  height: 270rpx;
+}
+.movie-name{
+  font-size: 28rpx;
+  color: #666666;
+}

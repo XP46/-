@@ -1,0 +1,12 @@
+<import src='../star-template/star-template.wxml' />
+<template name="movieItemTemp">
+  <view class='movie-item'  bindtap='ondetail' data-movieId='{{movieId}}'>
+    <image src='{{coverageUrl}}' class='movie-pic'></image>
+    <view class='movie-info'>
+      <text class='movie-name'>{{title}}</text>
+      <view class='movie-star'>
+        <template is='star-template' data="{{stars:stars,score:average}}"></template>
+      </view>
+    </view>
+  </view>
+</template>

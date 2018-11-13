@@ -1,0 +1,23 @@
+<!--pages/post/post-details/post-details.wxml-->
+<view class='details-container'>
+<!-- 头部图片 -->
+  <view class='details-head'>
+    <image src='{{post.headImgSrc}}' class='details-image'></image>
+    <image src="{{isPlayingMusic?'/images/music/music-stop.png':'/images/music/music-start.png'}}" class='music-pic' bindtap='onPlay'>
+    </image>
+  </view>
+<!-- 正文 -->
+    <view class='author-info'>
+      <image src='{{post.avatar}}' class='author-icon'></image>
+      <text class='details-date'><text class='details-form'>{{post.author}} </text> 发表于 {{post.dateTime}}</text>
+    </view>
+    <view class='details-title'><text>{{post.title}}</text></view>
+    <view class='details-share'>
+      <image src='/images/icon/collection.png' class='collection-share'></image>
+      <image src='/images/icon/share.png' class='collection-share'></image>
+    </view>
+    <view class='details-content'>
+      <text>{{post.detail}}</text>
+    </view>
+
+</view>

@@ -1,0 +1,67 @@
+<!--pages/movie/movie-details/movie-details.wxml-->
+<view class='detail-container'>
+  <image class='detail-head' src='{{movie.movieImg}}' mode='aspectFill'></image>
+    <view class='movie-view-container' catchtap='viewMoviePostImg' data-src='{{movie.movieImg}}'>
+        <view class='movie-detail'>
+          <text class='movie-title'>{{movie.title}}</text>
+          <text class='movie-country'>{{movie.country+" · "+movie.year}}</text>
+          <view class='movie-commend'>
+            <text class='nums'>{{movie.wishCount}}</text><text class='txt'>人喜欢</text><text class='nums'>{{movie.commentCount}}</text><text class='txt'>条评论</text>
+          </view>
+        </view>
+        <image src='{{movie.movieImg}}' class='movie-pic'  catchtap='viewMoviePostImg' data-src='{{movie.movieImg}}'></image>
+    </view>
+  <!-- 电影信息 -->
+  <view class='movie-info'>
+    <text class='Eng-title'>{{movie.originalTitle}}</text>
+    <view class='score-star'>
+      <text class='movie-score'>评分</text>
+      <block wx:for="{{movie.stars}}" wx:for-item="i" wx:key="">
+        <image wx:if="{{i}}" src='/images/icon/star.png' class='star-pic'></image>
+        <image wx:else src='/images/icon/none-star.png' class='star-pic'></image>
+      </block>
+      <text class='score'>{{movie.score}}</text>
+    </view>
+    <view class='movie-director'>
+      <text class='director'>导演</text>
+      <text class='name'>{{movie.director.name}}</text>
+    </view>
+    <view class='movie-actor'>
+      <text class='actor'>影人</text>
+      <text class='name'>{{movie.casts}}</text>
+    </view>
+    <view class='movie-type'>
+      <text class='type'>类型</text>
+      <text class='name'>{{movie.generes}}</text>
+    </view>
+  </view>
+  <!-- 电影信息 -->
+
+  <view class='link'></view>
+
+  <!-- 剧情简介 -->
+  <view class='movie-content'>
+    <text class='summary'>剧情简介</text>
+    <view class='content'>
+      <text>{{movie.summary}}</text>
+    </view>
+  </view>
+  <!-- 剧情简介 -->
+
+
+  <!-- 影人信息 -->
+    <view class='actor-info'>
+        <text class='actor'>影人</text>
+        <scroll-view scroll-x="true" >  
+           <view class='src_main'>
+              <block wx:for="{{movie.castInfo}}" wx:for-item="item" wx:key="">
+                <view class='people'>
+                  <image src='{{item.img}}' class='people-pic' catchtap='viewMoviePostImg' data-src='{{item.img}}'></image>
+                  <text class='name'>{{item.name}}</text>
+                </view>
+              </block>
+            </view> 
+        </scroll-view>
+    </view>
+  <!-- 影人信息 -->
+</view>

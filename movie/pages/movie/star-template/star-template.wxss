@@ -1,0 +1,22 @@
+.movie-comment{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.star-view{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.star-pic{
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: center;
+}
+.movie-score{
+  color: #546488;
+  font-size: 26rpx;
+  letter-spacing: 2rpx;
+  margin-left: 25rpx;
+}

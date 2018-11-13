@@ -1,0 +1,16 @@
+<import src='../movie-item-template/movie-item-template.wxml' />
+<template name="movieItem">
+  <view class='movie-hot'>
+    <view><text>{{categoryTitle}}</text></view>
+    <view bindtap='openMore' data-category="{{categoryTitle}}">
+      <text class='more'>更多</text>
+      <image src='/images/icon/arrow-right.png' class='more-pic'></image>
+    </view>
+  </view>
+  <view class='movie-display'>
+    <block wx:for="{{movies}}" wx:key="" wx:for-item="movie">
+      <template is="movieItemTemp" data="{{...movie}}" ></template>
+    </block>
+  </view>
+
+</template>
